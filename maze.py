@@ -27,7 +27,7 @@ class Maze:
         self.__cells: list[list[Cell]]|None = None
         self.__create_cells()
 
-    def get_cells(self) -> list:
+    def get_cells(self) -> list[list[Cell]]|None:
         return self.__cells
 
     @classmethod
@@ -59,7 +59,7 @@ class Maze:
 
     def __break_entrance_and_exit(self) -> None:
         """
-        Creates entrance and exit.
+        Creates entrance and exit. Entrance is always top left and exit bottom right.
         :return:
         """
         self.__cells[0][0].has_left_wall = False
