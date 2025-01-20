@@ -40,6 +40,10 @@ def main():
     cell_wall_length = max(args.width / args.columns, args.height / args.rows)
     Cell.set_wall_length(cell_wall_length)
 
+    if args.algorithm == 'recursive':
+        import sys
+        sys.setrecursionlimit(max(sys.getrecursionlimit(), args.columns * args.rows))
+
     maze = Maze(1, 1, args.rows, args.columns, args.algorithm, args.slow)
     maze.solve()
 

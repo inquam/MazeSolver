@@ -1,5 +1,13 @@
 Simple maze solver implemented in Python. Created as part of speedrunning a one free month on boot.dev.
 
+Both a recursive and a iterative approach is implemented.
+For large mazes the recursion depth can grow very high.
+The program will try to raise the recursion limit to be able to recurse the entire maze using
+
+```sys.setrecursionlimit()```
+
+But do note that this can result in a stack overflow and crash the program.
+The iterative algorithm that circumvents this is the default.
 
 ### Usage
 ```
