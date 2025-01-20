@@ -1,6 +1,5 @@
 Simple maze solver implemented in Python. Created as part of speedrunning a one free month on boot.dev.
 
-You can also set the window size and size of the maze in `main` along with the graphical size of cells by altering `WALL_LENGTH` in `cell.py`.
 
 ### Usage
 ```
